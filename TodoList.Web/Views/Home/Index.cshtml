@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TodoList.Web.Models.Item>
+
+<h2>Todo List</h2>
+
+<a asp-action="Create">Add</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Done</th>
+            <th>Title</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="done" @(item.IsCompleted ? "checked=\"checked\"" : "") />
+                </td>
+                <td>@item.Title</td>
+                <td>
+                    <input type="hidden" name="id" value="@item.Id" />
+                    <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
