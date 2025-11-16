@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Entities\TodoList.Core.csproj" />
-    <ProjectReference Include="..\Infratructure\TodoList.Infrastructure.csproj" />
-    <ProjectReference Include="..\UseCases\TodoList.UseCases.csproj" />
+    <ProjectReference Include="..\TodoList.Core\TodoList.Core.csproj" />
+    <ProjectReference Include="..\TodoList.Infrastructure\TodoList.Infrastructure.csproj" />
+    <ProjectReference Include="..\TodoList.UseCases\TodoList.UseCases.csproj" />
   </ItemGroup>
 
 </Project>
